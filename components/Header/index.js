@@ -1,9 +1,14 @@
 import React, { Component } from "react";
 import { Header } from "react-native-elements";
-import Sort from "../Sort";
+import Loading from "../Status/Loading";
 
 export default class MyHeader extends Component {
   render() {
-    return <Header centerComponent={{ text: "Creatella Products" }} />;
+    return (
+      <Header
+        centerComponent={{ text: "Creatella Products" }}
+        rightComponent={<Loading />}
+      />
+    );
   }
 }

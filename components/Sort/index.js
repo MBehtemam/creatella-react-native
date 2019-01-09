@@ -9,6 +9,17 @@ class MySort extends Component {
   };
   updateIndex = selectedIndex => {
     this.setState({ selectedIndex });
+    switch (selectedIndex) {
+      case 0:
+        this.props.sortById();
+        break;
+      case 1:
+        this.props.sortByPrice();
+        break;
+      case 2:
+        this.props.sortBySize();
+        break;
+    }
   };
   render() {
     const buttons = ["Id", "Price", "Size"];
