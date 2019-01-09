@@ -4,6 +4,8 @@ import { Image } from "react-native";
 import { Card } from "react-native-elements";
 import Actions from "Creatella-business-logic/Shared/components/Ads/Actions";
 import State from "Creatella-business-logic/Shared/components/Ads/State";
+import Constants from "../config/default";
+import { config } from "rx";
 
 class MyAdsContainer extends Component {
   state = {
@@ -21,7 +23,7 @@ class MyAdsContainer extends Component {
         {IDS.hasOwnProperty(this.state.adsId) && (
           <Image
             source={{
-              uri: "http://192.168.1.41:3000/ads?r=" + IDS[this.state.adsId]
+              uri: `${Constants.AdsServerUrl}${IDS[this.state.adsId]}`
             }}
             style={{ width: 320, height: 200 }}
           />
