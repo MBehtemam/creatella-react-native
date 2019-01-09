@@ -8,10 +8,19 @@ export default class ProductContainer extends Component {
     return (
       <Card>
         <View style={style.productFace}>
-          <Text style={style.face}>{face}</Text>
+          <Text style={{ fontSize: size, color: "#F50057" }}>{face}</Text>
         </View>
         <Text>{date}</Text>
-        <Button raised backgroundColor="#880E4F" title={`Buy ${price}`} />
+        <Button
+          buttonStyle={{
+            borderRadius: 0,
+            marginLeft: 0,
+            marginRight: 0,
+            marginBottom: 0
+          }}
+          backgroundColor="#880E4F"
+          title={`Buy ${price}`}
+        />
       </Card>
     );
   }
@@ -28,7 +37,5 @@ const style = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center"
   },
-  face: {
-    color: "#F50057"
-  }
+  face: {}
 });
