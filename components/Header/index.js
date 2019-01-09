@@ -1,12 +1,9 @@
 import React, { Component } from "react";
 import { Header } from "react-native-elements";
-class AppHeader extends Component {
+import Sort from "../Sort";
+
+export default class MyHeader extends Component {
   render() {
-    return (
-      <Header
-        centerComponent={{ text: "Products", style: { color: "#fff" } }}
-      />
-    );
+    return <Header centerComponent={{ text: "Creatella Products" }} />;
   }
 }
-export default AppHeader;

@@ -7,13 +7,14 @@
     "eject": "expo eject"
   },
   "dependencies": {
+    "@expo/vector-icons": "^9.0.0",
+    "Creatella-business-logic": "git+https://github.com/MBehtemam/cretella-business-logic.git",
     "expo": "^32.0.0",
-	"Creatella-business-logic": "git+https://github.com/MBehtemam/cretella-business-logic.git",
     "react": "16.5.0",
     "react-native": "https://github.com/expo/react-native/archive/sdk-32.0.0.tar.gz",
     "react-native-elements": "^0.19.1",
-    "react-redux": "^6.0.0",
-    "redux": "^4.0.1"
+    "react-native-material-menu": "^0.4.2",
+    "react-redux": "^6.0.0"
   },
   "devDependencies": {
     "babel-preset-expo": "^5.0.0"
