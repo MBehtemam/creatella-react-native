@@ -23,7 +23,7 @@ class MyAdsContainer extends Component {
             source={{
               uri: "http://192.168.1.41:3000/ads?r=" + IDS[this.state.adsId]
             }}
-            style={{ width: 150, height: 100 }}
+            style={{ width: 320, height: 200 }}
           />
         )}
       </Card>

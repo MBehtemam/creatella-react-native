@@ -11,32 +11,20 @@ class _Grid extends Component {
   }
   render() {
     let adsCounter = 0;
-    return (
-      <Grid>
-        {this.props.products.map((product, index) => {
-          adsCounter++;
-          if (adsCounter === this.props.ads.adsPerProduct) {
-            adsCounter = 0;
-            return (
-              <Fragment key={product.id}>
-                <Row>
-                  <ProductContainer product={product} />
-                </Row>
-                <Row>
-                  <AdsContainer />
-                </Row>
-              </Fragment>
-            );
-          } else {
-            return (
-              <Row key={product.id}>
-                <ProductContainer product={product} />
-              </Row>
-            );
-          }
-        })}
-      </Grid>
-    );
+    return this.props.products.map((product, index) => {
+      adsCounter++;
+      if (adsCounter === this.props.ads.adsPerProduct) {
+        adsCounter = 0;
+        return (
+          <Fragment key={product.id}>
+            <ProductContainer key={product.id} product={product} />
+            <AdsContainer key={index} />
+          </Fragment>
+        );
+      } else {
+        return <ProductContainer key={product.id} product={product} />;
+      }
+    });
   }
 }
 

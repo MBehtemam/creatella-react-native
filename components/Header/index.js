@@ -6,7 +6,11 @@ export default class MyHeader extends Component {
   render() {
     return (
       <Header
-        centerComponent={{ text: "Creatella Products" }}
+        backgroundColor="#AD1457"
+        centerComponent={{
+          text: "Creatella Products",
+          style: { color: "#ffffff", fontSize: 20 }
+        }}
         rightComponent={<Loading />}
       />
     );
